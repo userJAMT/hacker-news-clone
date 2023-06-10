@@ -8,15 +8,16 @@ export const storyHeader = style({
   display: 'flex',
   alignItems: 'center',
   gap: '8px',
-  marginBottom: '4px',
-  lineHeight: '24px'
+  marginBottom: '2px',
+  lineHeight: '18px'
 })
 
 export const storyFooter = style({
   display: 'flex',
   alignItems: 'center',
   gap: '8px',
-  lineHeight: '24px'
+  lineHeight: '12px',
+  fontSize: '12px'
 })
 
 export const storyLink = style({
@@ -30,5 +31,9 @@ export const storyLink = style({
 export const storyTitle = style({
   textDecoration: 'none',
   color: '#111',
-  fontSize: '24px'
+  fontSize: '18px'
+})
+
+export const number = style({
+  width: '2%'
 })

@@ -10,7 +10,13 @@ export default function TopStories () {
       <ul style={{ listStyle: 'none' }}>
         {isLoading && <li>Loading...</li>}
         {data?.map((id: number, index: number) => (
-          <li key={id}>
+          <li
+            key={id} style={{
+              display: 'flex',
+              marginBottom: '8px',
+              padding: '5px 10px'
+            }}
+          >
             <Story id={id} index={index} />
           </li>
         ))}
