@@ -3,6 +3,7 @@ import { getItemInfo } from '../services/hacker-news'
 import { Link } from 'wouter'
 import { storyLink, story, storyFooter, storyHeader, storyTitle, number } from './Story.css'
 import { StoryLoader } from './StoryLoader'
+import { getRelativeTime } from '../utils/getRelativeTime'
 
 export const Story = (props: {
   id: number
@@ -21,7 +22,7 @@ export const Story = (props: {
     domain = new URL(url).hostname.replace('www.', '')
   } catch {}
 
-  // TODO: create relative time
+  const relativeTime = getRelativeTime(time)
 
   return (
     <>
@@ -52,7 +53,7 @@ export const Story = (props: {
             by {by}
           </Link>
           <Link className={storyLink} href={`/article/${id}`}>
-            6 hours ago
+            {relativeTime}
           </Link>
           <Link className={storyLink} href={`/article/${id}`}>
             {kids?.length ?? 0} comments

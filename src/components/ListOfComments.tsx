@@ -1,6 +1,7 @@
 import useSWR from 'swr'
 import { getItemInfo } from '../services/hacker-news'
 import { CommentLoader } from './CommentLoader'
+import { getRelativeTime } from '../utils/getRelativeTime'
 
 export const Comment = (props: {
   id: number
@@ -13,6 +14,7 @@ export const Comment = (props: {
   }
 
   const { by, text, time, kids } = data
+  const relativeTime = getRelativeTime(time)
 
   return (
     <>
@@ -21,7 +23,7 @@ export const Comment = (props: {
           <small>
             <span>{by}</span>
             <span>.</span>
-            <span>4 hours ago</span>
+            <span> {relativeTime}</span>
           </small>
         </summary>
 
