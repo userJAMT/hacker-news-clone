@@ -1,5 +1,3 @@
-# Enunciado
-
 ## Requirements:
 - Use a Styled Components/CSS-in-JS solution of your choice
 - Show placeholder/skeleton for stories and comments while loading
